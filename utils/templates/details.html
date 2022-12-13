@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mx-auto" style="width: 50rem;">
+    <h5 class="card-header text-center">User Details</h5>
+    {% if User.query.filter_by(id=user.id).first().memberships %}
+    <div class="card mx-auto my-4" style="width: 35rem;">
+        <div class="card-body my-2">
+            <div class="row">
+                <div class="col-sm">
+                    <strong>
+                        <p class="fw-bold">Username</p>  
+                        <p class="fw-bold">Age</p>  
+                        <p class="fw-bold">Email</p>
+                        <p class="fw-bold">Last Paid</p>
+                        <p class="fw-bold">Valid for the month</p>
+                        <p class="fw-bold">Expiry Date</p>
+                        <p class="fw-bold">Membership Status</p>
+                    </strong>
+                </div>
+                <div class="col-sm">
+                    <p class="fw-bold">:</p>  
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                </div>
+                <div class="col-sm">
+                    <p class="fw-normal">{{ user.username }}</p>  
+                    <p class="fw-normal">{{ user.email }}</p>
+                    <p class="fw-normal">{{ user.age }}</p>
+                    <p class="fw-normal">{{ user.memberships.datePaid.date() }}</p>
+                    <p class="fw-normal">{{ user.memberships.datePaid.date().strftime("%B") }}</p>
+                    <p class="fw-normal">{{ user.memberships.dateValid.date() }}</p>
+                    <p class="fw-normal">{{ status }}</p>
+                </div>
+            </div>
+  
+            {% if status == 'Valid' %}
+            <div class="row">
+                <div class="col-sm">
+                    <strong>
+                        <p class="fw-bold">Batch Number</p>
+                        <p class="fw-bold">Batch Timings</p>
+                    </strong>
+                </div>
+                <div class="col-sm">
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                </div>
+
+                <div class="col-sm">
+                    <p class="fw-normal">{{batch}}</p>
+                    <p class="fw-normal">{{Batch.query.filter_by(batchId=batch).first().batchTime}}</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- <center> -->
+        <!-- <div class="mx-auto my-4"> -->
+        <!--         <a class="mx-2" href="{{ url_for('unenroll') }}"><button class="btn btn-outline-success">Unenroll</button></a> -->
+        <!-- </div> -->
+        <!-- </center> -->
+
+    {% endif %}
+
+    </div>
+    </div>
+
+    
+    {% else %}
+    <div class="card mx-auto my-4" style="width: 35rem;">
+        <div class="card-body my-2">
+            <div class="row">
+                <div class="col-sm">
+                    <strong>
+                        <p class="fw-bold">Username</p>  
+                        <p class="fw-bold">Age</p>  
+                        <p class="fw-bold">Email</p>
+                        <p class="fw-bold">Membership Status</p>
+                    </strong>
+                </div>
+                <div class="col-sm">
+                    <p class="fw-bold">:</p>  
+                    <p class="fw-bold">:</p>  
+                    <p class="fw-bold">:</p>
+                    <p class="fw-bold">:</p>
+                </div>
+                <div class="col-sm">
+                    <p class="fw-normal">{{ user.username }}</p>  
+                    <p class="fw-normal">{{ user.age }}</p>
+                    <p class="fw-normal">{{ user.email }}</p>
+                    <p class="fw-normal">Invalid</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-top pt-3">
+        <center>
+        <p class="text-muted">
+        You have never enrolled for a Yoga Class. Enroll<a class="ml-2" href="{{ url_for('membership') }}">here</a>
+        </p>
+        </center>
+    </div>
+
+
+    {% endif %}
+    {% endblock %}

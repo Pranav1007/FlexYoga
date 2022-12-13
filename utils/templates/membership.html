@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-section">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Select Slot for Yoga Class</legend>
+            <div class="shadow-sm p-3 mb-3 bg-body rounded">
+                {{ form.batch.label(class="form-control-label") }}
+                {{ form.batch(class="form-control form-control-lg") }}
+            </div>
+        </fieldset>
+        <div class="form-group mb-3">
+            {{ form.confirm(class="btn btn-outline-success") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
