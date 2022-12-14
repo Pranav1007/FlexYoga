@@ -29,8 +29,8 @@
                 </div>
                 <div class="col-sm">
                     <p class="fw-normal">{{ user.username }}</p>  
-                    <p class="fw-normal">{{ user.email }}</p>
                     <p class="fw-normal">{{ user.age }}</p>
+                    <p class="fw-normal">{{ user.email }}</p>
                     <p class="fw-normal">{{ user.memberships.datePaid.date() }}</p>
                     <p class="fw-normal">{{ user.memberships.datePaid.date().strftime("%B") }}</p>
                     <p class="fw-normal">{{ user.memberships.dateValid.date() }}</p>
