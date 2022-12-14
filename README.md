@@ -30,7 +30,7 @@ Our Database consists of 3 tables
 ![ER Diagram](https://user-images.githubusercontent.com/70643852/207526925-6d5a8071-e810-4f64-9907-388b4e623bfa.png)
 
 ## Process and Steps
-* User creates an account. Only users within the range of 18-65 are allowed to do the same
+* User creates an account. Only users within the age range of 18-65 are allowed to do the same
 * Once they have logged into their account, they have two options: register or view their user details.
 * User details will display when they last registered and their current membership status.
 * The web app will give the batch details in the registration form. The user has to select a batch and complete the payment.
