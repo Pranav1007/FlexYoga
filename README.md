@@ -1,5 +1,4 @@
 <h1 align="center"> FlexYoga </h1>
-<h2 align="center"> Your online Yoga Admission Form </h2>
 
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
@@ -55,3 +54,19 @@ Our Database consists of 3 tables
 [![License](https://img.shields.io/badge/License-Apache%202.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
 <br/>
 This project is under the Apache-2.0 License License. See [LICENSE](LICENSE) for Details.
+
+## Done By
+<table>
+  <tr>
+    <td align="center"><img src="https://avatars.githubusercontent.com/u/70643852?s=96&v=4" width="100px;" height="100px;" alt=""/><br/><sub><b>Pranav B Kashyap</b></sub></a><br/><p align="center">
+      <p align="center">
+        <a href="https://www.linkedin.com/in/pranav-b-kashyap-1994001b6/" alt="Linkedin">
+          <img src="http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width = "30">
+        </a>
+        <a href="https://github.com/Pranav1007" alt="Github">
+          <img src="http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width = "30">
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
