@@ -9,12 +9,9 @@ from .model import Batch, Membership, User
 
 
 @app.route('/')
+@app.route('/home')
 def home():
-    return render_template('base.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    return render_template('home.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -78,7 +75,7 @@ def membership():
         member = Membership(userId=user.id, batchId=batchId, status=True)
         db.session.add(member)
         db.session.commit()
-        flash('Slot Booked for User: {}'.format(batchId), 'success')
+        flash('You have successfully enrolled for batch: {}'.format(batchId), 'success')
         return redirect(url_for('details'))
     return render_template('membership.html', title='Enroll', form=form, user=user, User=User)                
 

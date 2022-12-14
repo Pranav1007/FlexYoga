@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="content-section">
+        <p>
+        <h2>What is Yoga</h2>
+        <strong>Yoga</strong> is an ancient practice that builds strength and awareness and brings together the mind and body. It includes breathing exercises, meditation and asanas or poses that stretch and flex various muscle groups. These asanas are designed to encourage relaxation and reduce stress.
+
+        The importance of yoga cannot be stressed enough. There are different kinds of yoga practices. There are beginner classes in every style, and the modifications in every yoga pose make it possible for anyone to start. So whether you have a sedentary lifestyle or you’re a professional athlete, size and fitness levels do not matter.
+        </p>
+
+        <hr>
+        <p>
+        <h2>Benefits of Yoga</h2>
+        <ul>
+            <li>Helps improve <strong>strength, balance and flexibilty</strong></li>
+            <li>Is relaxing and helps one sleep better</li>
+            <li>Helps in managing stress</li>
+            <li>Benifits heart health, and can ease arthritis symptoms</li>
+        </ul>
+        </p>
+        <hr>
+        <p>
+        <h2>What we do</h2>
+        <ul>
+            <li>Provide a platform to enrol for Yoga classes</li>
+            <li>
+                We have 4 batches:
+                <ol>
+                    <li><strong>6:00 AM to 7:00 AM</strong></li>
+                    <li><strong>7:00 AM to 8:00 AM</strong></li>
+                    <li><strong>8:00 AM to 9:00 AM</strong></li>
+                    <li><strong>5:00 PM to 6:00 PM</strong></li>
+                </ol>
+            </li>
+            <li>Registration Fee: <strong>₹ 500</strong></li>
+            <li>Option to change batches available. (On a monthly basis)</li>
+        </ul>
+        </p>
+<center>
+<div class="border-top pt-3">
+        <p class="text-muted">
+        Book your batch<a class="ml-2" href="{{ url_for('membership') }}">here</a>
+        </p>
+    </div>
+    </center>
+</div>
+
+
+{% endblock %}

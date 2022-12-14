@@ -27,15 +27,13 @@
                     <div class="collapse navbar-collapse" id="navbarToggle">
                         {% if current_user.is_authenticated %}
                         <div class="navbar-nav mr-auto">
-                            <a class="nav-item nav-link" href="/">Home</a>
-                            <a class="nav-item nav-link" href="/about">About Us</a>
+                            <a class="nav-item nav-link" href="/home">Home</a>
                             <a class="nav-item nav-link" href="/membership">Enrollment</a>
                             <a class="nav-item nav-link" href="/details">Details</a>
                         </div>
                         {% else %}
                         <div class="navbar-nav mr-auto">
-                            <a class="nav-item nav-link" href="/">Home</a>
-                            <a class="nav-item nav-link" href="/about">About Us</a>
+                            <a class="nav-item nav-link" href="/home">Home</a>
                         </div>
                         {% endif %}
                         <!-- Navbar Right Side -->
@@ -67,7 +65,8 @@
                     {% endwith %}
                     {% block content %}{% endblock %}
                 </div>
-
             </div>
-        </main>    </body>
+        </main>    
+
+    </body>
 </html>

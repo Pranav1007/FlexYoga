@@ -44,12 +44,3 @@ class Membership(db.Model):
 
     def __repr__(self) :
         return f"Membership: ('{self.userId}', '{self.datePaid}', '{self.dateValid}', '{self.status}')"
-
-
-
-def init_db():
-    db.create_all()
-    db.session.commit()
-
-if __name__ == '__main__':
-    init_db()
