@@ -46,7 +46,7 @@ def login():
             flash('Login Unsuccessful. Please enter the right username/password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
-@app.route('/logout', methods=['GET', 'POST'])
+@app.route('/logout')
 @login_required
 def logout():
     # To show how the date update works
@@ -80,7 +80,7 @@ def membership():
     return render_template('membership.html', title='Enroll', form=form, user=user, User=User)                
 
 
-@app.route('/details', methods=['GET', 'POST'])
+@app.route('/details')
 @login_required
 def details():
     user = User.query.get(current_user.id)
@@ -97,7 +97,7 @@ def details():
 
 
  # Further Improvements. Not implemented
-@app.route('/unenroll', methods=['GET', 'POST'])
+@app.route('/unenroll')
 @login_required
 def unenroll():
     user = User.query.get(current_user.id)
