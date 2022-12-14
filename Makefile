@@ -4,6 +4,7 @@ system-packages:
 	sudo apt install python3-pip -y
 
 python-packages:
+	pip3 install --upgrade pip
 	pip3 install -r requirements.txt
 
 install: system-packages python-packages
