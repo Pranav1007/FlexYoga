@@ -47,6 +47,27 @@ Our Database consists of 3 tables
 ## Further Improvements / ToDo
 - [ ] Automate Script to remove membership from the database, at the end of the month. (Currently doing it using Flask, would like to create a Database Stored Procedure)
 
+## Run Locally
+- **Clone the GitHub repository**
+```python
+$ git clone git@github.com:Pranav1007/FlexYoga.git
+```
+
+- **Move to the Project Directory**
+```python
+$ cd FlexYoga
+```
+
+- **Install the [requirements](requirements.txt)**
+```python
+$ make python-packages
+```
+
+- **Start the local flask server**
+```python
+$ make run
+```
+
 ## Sample UI Demo
 
 ### Details Page
