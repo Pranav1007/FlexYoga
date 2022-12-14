@@ -39,6 +39,11 @@ Our Database consists of 3 tables
 * Every time the user logs in, the application will update the membership status by checking whether the validity of their membership has expired. (This could be an area of improvement)
 * User can log out once they are done.
 
+## Points to Note
+* We are only allowing a user to enrol once a month. (An alternative could be to let them unenroll that month and then again re-enrol but in the same batch)
+* To ensure that only users within the 18-65 age group enrol, we have put an age limit condition while registering.
+* Users can securely log in and out of their account using their username and password. This way, one's enrollment is only in their hands.
+
 ## Further Improvements / ToDo
 - [ ] Automate Script to remove membership from the database, at the end of the month. (Currently doing it using Flask, would like to create a Database Stored Procedure)
 
